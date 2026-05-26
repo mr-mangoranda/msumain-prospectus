@@ -199,7 +199,7 @@ export const coursesData: Course[] = [
     pdfFileName: "m-am-prospectus.pdf"
   },
   {
-    id: "1",
+    id: "CICS",
     code: "BSCS",
     name: "BS Computer Science",
     description: "Focuses on the study of concepts and theories, algorithmic foundations, implementation and application of information and computing solutions.",
@@ -207,10 +207,10 @@ export const coursesData: Course[] = [
     duration: "4 Years",
     careers: "Software Engineer, Data Scientist, AI Researcher",
     colorScheme: "maroon",
-    pdfFileName: "./../public/College_Of_Information_Computing_Science/BS-CS_Prospectus_withLab.pdf"
+    pdfFileName: "./../CICS/BS-ComputerScience.pdf"
   },
   {
-    id: "2",
+    id: "CICS2",
     code: "BSIT",
     name: "BS Information Technology major in Database",
     description: "Focuses on the utilization of computers and computer software to plan, install, customize, operate, manage, administer and maintain information technology infrastructure with specialization in Database systems.",
@@ -218,10 +218,10 @@ export const coursesData: Course[] = [
     duration: "4 Years",
     careers: "Database Administrator, Data Analyst, Software Developer",
     colorScheme: "orange",
-    pdfFileName: "bsit-db-prospectus.pdf"
+    pdfFileName: "./../CICS/BS-IT-Database.pdf"
   },
   {
-    id: "2b",
+    id: "CICS3",
     code: "BSIT",
     name: "BS Information Technology major in Networking",
     description: "Focuses on computer networks, systems administration, cloud infrastructure and cybersecurity principles.",
@@ -229,10 +229,10 @@ export const coursesData: Course[] = [
     duration: "4 Years",
     careers: "Network Engineer, Systems Administrator, Cloud Architect",
     colorScheme: "blue",
-    pdfFileName: "bsit-nw-prospectus.pdf"
+    pdfFileName: "./../CICS/BS-IT-Networking.pdf"
   },
   {
-    id: "2c",
+    id: "CICS4",
     code: "BSIS",
     name: "BS Information Systems",
     description: "Integrates business management with information technology, focusing on the design, development, and implementation of business solutions.",
@@ -240,7 +240,7 @@ export const coursesData: Course[] = [
     duration: "4 Years",
     careers: "Systems Analyst, Business Analyst, IT Consultant",
     colorScheme: "yellow",
-    pdfFileName: "bsis-prospectus.pdf"
+    pdfFileName: "./../CICS/BS-IS_part1.jpg"
   },
   {
     id: "3",
