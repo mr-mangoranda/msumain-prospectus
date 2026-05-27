@@ -35,6 +35,7 @@ const rawData = [
   { code: "BSA-ENTOM", name: "BS Agriculture Major in Entomology", desc: "Study of insects and their relationship to humans, the environment, and other organisms.", col: "College of Agriculture", dur: "4 Years", car: "Entomologist, Pest Control Specialist" },
   { code: "BSA-PP", name: "BS Agriculture Major in Plant Pathology", desc: "Study of plant diseases and their management.", col: "College of Agriculture", dur: "4 Years", car: "Plant Pathologist" },
   { code: "BS-ABM", name: "BS Agribusiness Management", desc: "Integration of business principles with agriculture.", col: "College of Agriculture", dur: "4 Years", car: "Agribusiness Manager" },
+  { code: "DAT", name: "Diploma in Agricultural Technology", desc: "2-year program focusing on hands-on agricultural skills.", col: "College of Agriculture", dur: "2 Years", car: "Agricultural Technician" },
   { code: "MS-AGRI", name: "Master of Science in Agriculture", desc: "Post-graduate research in agricultural sciences.", col: "College of Agriculture", dur: "2 Years", car: "Researcher, Academe" },
 
   // CBAA
@@ -63,6 +64,8 @@ const rawData = [
   { code: "BSAE", name: "BS Agricultural and Biosystems Engineering", desc: "Engineering applied to agriculture and biology.", col: "College of Engineering", dur: "4 Years", car: "Agricultural Engineer" },
   { code: "DCT", name: "Diploma in Construction Technology", desc: "2-year program for construction skills.", col: "College of Engineering", dur: "2 Years", car: "Construction Supervisor" },
   { code: "DET", name: "Diploma in Electrical Technology", desc: "2-year program for electrical installation.", col: "College of Engineering", dur: "2 Years", car: "Electrician, Technician" },
+  { code: "MS-ENG", name: "Master of Science in Engineering", desc: "Post-graduate engineering research.", col: "College of Engineering", dur: "2 Years", car: "Senior Engineer, Researcher" },
+
   // Fisheries
   { code: "BSF", name: "BS Fisheries", desc: "Study of aquaculture, capture fisheries, and aquatic resources.", col: "College of Fisheries", dur: "4 Years", car: "Fisheries Technologist" },
   { code: "D-AQUA", name: "Diploma in Aquaculture", desc: "2-year program on breeding and rearing aquatic animals.", col: "College of Fisheries", dur: "2 Years", car: "Aquaculture Technician" },
@@ -77,11 +80,13 @@ const rawData = [
   // Hospitality
   { code: "BSHM", name: "BS Hospitality Management", desc: "Management of hotels, restaurants, and resorts.", col: "College of Hospitality and Tourism Management", dur: "4 Years", car: "Hotel Manager" },
   { code: "BSTM", name: "BS Tourism Management", desc: "Management of tourism operations and planning.", col: "College of Hospitality and Tourism Management", dur: "4 Years", car: "Tourism Officer" },
+  { code: "D-CUL", name: "Diploma in Culinary Arts", desc: "2-year program in professional cooking.", col: "College of Hospitality and Tourism Management", dur: "2 Years", car: "Chef" },
 
   // CICS
   { code: "BSCS", name: "BS Computer Science", desc: "Study of algorithms, data structures, and software engineering.", col: "College of Information and Computing Sciences", dur: "4 Years", car: "Software Engineer" },
   { code: "BSIT", name: "BS Information Technology", desc: "Focuses on network administration, web development, and IT systems.", col: "College of Information and Computing Sciences", dur: "4 Years", car: "IT Specialist" },
   { code: "BSIS", name: "BS Information Systems", desc: "Integration of IT solutions with business processes.", col: "College of Information and Computing Sciences", dur: "4 Years", car: "Systems Analyst" },
+  { code: "D-IT", name: "Diploma in Information Technology", desc: "2-year practical IT skills program.", col: "College of Information and Computing Sciences", dur: "2 Years", car: "IT Technician" },
 
   // Law
   { code: "JD", name: "Juris Doctor (Law)", desc: "Post-graduate professional degree in law.", col: "College of Law", dur: "4 Years", car: "Lawyer, Judge" },
@@ -112,6 +117,7 @@ const rawData = [
 
   // Sports
   { code: "BPED", name: "Bachelor of Physical Education", desc: "Prepares physical education teachers and sports leaders.", col: "College of Sports, Physical Education and Recreation", dur: "4 Years", car: "PE Teacher" },
+  { code: "D-SC", name: "Diploma in Sports Coaching", desc: "2-year program for athletic coaching.", col: "College of Sports, Physical Education and Recreation", dur: "2 Years", car: "Sports Coach" },
 
   // King Faisal
   { code: "BA-IS", name: "BA Islamic Studies", desc: "Study of Islamic history, theology, and law.", col: "King Faisal Center for Islamic, Arabic and Asian Studies", dur: "4 Years", car: "Islamic Scholar" },

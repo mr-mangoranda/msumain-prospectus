@@ -35,7 +35,7 @@ export function CourseDirectory() {
   }, []);
 
   const toggleBookmark = (id: string) => {
-    setBookmarkedIds(prev => 
+    setBookmarkedIds(prev =>
       prev.includes(id) ? prev.filter(bId => bId !== id) : [...prev, id]
     );
   };
@@ -60,11 +60,11 @@ export function CourseDirectory() {
   // Filter and Sort Logic
   const filteredCourses = useMemo(() => {
     let filtered = coursesData.filter(course => {
-      const matchesSearch = course.code.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                            course.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                            course.description.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesSearch = course.code.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        course.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        course.description.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCollege = activeCollege === "All Colleges" || course.college === activeCollege;
-      
+
       return matchesSearch && matchesCollege;
     });
 
@@ -94,7 +94,7 @@ export function CourseDirectory() {
   return (
     <section id="courses" className="py-12 px-6 md:px-12 bg-transparent relative min-h-screen">
       <div className="max-w-[1400px] mx-auto">
-        
+
         <div className="text-center max-w-3xl mx-auto space-y-6 mb-16">
           <h2 className="text-4xl md:text-5xl font-heading font-black text-red-900 uppercase tracking-tight leading-none" style={{ textShadow: "3px 3px 0px #FECACA" }}>
             Course Directory
@@ -123,13 +123,13 @@ export function CourseDirectory() {
         {/* Mobile & Tablet Filter Select */}
         <div className="lg:hidden w-full max-w-md mx-auto px-4 mb-8">
           <label htmlFor="college-filter" className="block text-sm font-bold text-slate-700 mb-2">Filter by College</label>
-            <select
-              id="college-filter"
-              value={activeCollege}
-              onChange={(e) => setActiveCollege(e.target.value)}
-              className="w-full bg-white/50 backdrop-blur-md border border-white/60 rounded-xl px-4 py-3.5 text-sm font-bold text-slate-700 focus:outline-none focus:border-red-900/50 focus:bg-white/80 transition-all shadow-sm appearance-none cursor-pointer"
-              style={{ backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")", backgroundPosition: "right 0.5rem center", backgroundRepeat: "no-repeat", backgroundSize: "1.5em 1.5em", paddingRight: "2.5rem" }}
-            >
+          <select
+            id="college-filter"
+            value={activeCollege}
+            onChange={(e) => setActiveCollege(e.target.value)}
+            className="w-full bg-white/50 backdrop-blur-md border border-white/60 rounded-xl px-4 py-3.5 text-sm font-bold text-slate-700 focus:outline-none focus:border-red-900/50 focus:bg-white/80 transition-all shadow-sm appearance-none cursor-pointer"
+            style={{ backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")", backgroundPosition: "right 0.5rem center", backgroundRepeat: "no-repeat", backgroundSize: "1.5em 1.5em", paddingRight: "2.5rem" }}
+          >
             {colleges.map((college) => (
               <option key={college} value={college}>{college}</option>
             ))}
@@ -142,11 +142,10 @@ export function CourseDirectory() {
             <button
               key={college}
               onClick={() => setActiveCollege(college)}
-              className={`px-5 py-2.5 rounded-full text-[13px] font-bold transition-all duration-300 shadow-sm border ${
-                activeCollege === college 
-                  ? "bg-red-900 text-white border-red-900 shadow-[0_8px_20px_rgba(127,29,29,0.25)] scale-105" 
+              className={`px-5 py-2.5 rounded-full text-[13px] font-bold transition-all duration-300 shadow-sm border ${activeCollege === college
+                  ? "bg-red-900 text-white border-red-900 shadow-[0_8px_20px_rgba(127,29,29,0.25)] scale-105"
                   : "bg-white/50 backdrop-blur-md text-slate-600 border-white/60 hover:bg-white/80 hover:scale-105 hover:shadow-md"
-              }`}
+                }`}
             >
               {college}
             </button>
@@ -162,9 +161,9 @@ export function CourseDirectory() {
               </button>
             )}
           </div>
-          
+
           <div className="flex items-center gap-3">
-            <button 
+            <button
               onClick={() => setIsSidebarOpen(true)}
               className="flex items-center gap-2 bg-white/50 backdrop-blur-md hover:bg-white/80 text-slate-700 hover:text-red-900 border border-white/60 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:shadow-md"
             >
@@ -192,7 +191,7 @@ export function CourseDirectory() {
         <div className="min-h-[400px]">
           <AnimatePresence mode='popLayout'>
             {filteredCourses.length > 0 ? (
-              <motion.div 
+              <motion.div
                 layout
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
               >
@@ -205,10 +204,10 @@ export function CourseDirectory() {
                     transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.5), ease: "easeOut" }}
                     key={course.id}
                   >
-                    <CourseCard 
-                      course={course} 
+                    <CourseCard
+                      course={course}
                       isBookmarked={bookmarkedIds.includes(course.id)}
-                      onToggleBookmark={() => toggleBookmark(course.id)} 
+                      onToggleBookmark={() => toggleBookmark(course.id)}
                       isCompared={compareIds.includes(course.id)}
                       onToggleCompare={() => toggleCompare(course.id)}
                     />
@@ -216,7 +215,7 @@ export function CourseDirectory() {
                 ))}
               </motion.div>
             ) : (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="text-center py-20 text-slate-400 font-medium flex flex-col items-center justify-center"
@@ -245,24 +244,24 @@ export function CourseDirectory() {
         )}
       </AnimatePresence>
 
-      <BookmarksSidebar 
-        isOpen={isSidebarOpen} 
-        onClose={() => setIsSidebarOpen(false)} 
-        bookmarkedIds={bookmarkedIds} 
-        onToggleBookmark={toggleBookmark} 
+      <BookmarksSidebar
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+        bookmarkedIds={bookmarkedIds}
+        onToggleBookmark={toggleBookmark}
       />
 
-      <CompareFloatingBar 
-        compareIds={compareIds} 
-        onClear={() => setCompareIds([])} 
-        onCompare={() => setIsCompareModalOpen(true)} 
+      <CompareFloatingBar
+        compareIds={compareIds}
+        onClear={() => setCompareIds([])}
+        onCompare={() => setIsCompareModalOpen(true)}
       />
 
-      <CompareModal 
-        isOpen={isCompareModalOpen} 
-        onClose={() => setIsCompareModalOpen(false)} 
-        compareIds={compareIds} 
-        onToggleCompare={toggleCompare} 
+      <CompareModal
+        isOpen={isCompareModalOpen}
+        onClose={() => setIsCompareModalOpen(false)}
+        compareIds={compareIds}
+        onToggleCompare={toggleCompare}
       />
     </section>
   );

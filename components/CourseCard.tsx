@@ -1,13 +1,13 @@
 import { Course } from "@/lib/data";
 import { Clock, Briefcase, GraduationCap, Download, Bookmark, BookmarkCheck, GitCompare } from "lucide-react";
 
-export function CourseCard({ 
-  course, 
-  isBookmarked, 
+export function CourseCard({
+  course,
+  isBookmarked,
   onToggleBookmark,
   isCompared,
   onToggleCompare
-}: { 
+}: {
   course: Course;
   isBookmarked?: boolean;
   onToggleBookmark?: () => void;
@@ -65,13 +65,13 @@ export function CourseCard({
     <div className="group relative bg-white/60 backdrop-blur-xl rounded-2xl md:rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/50 flex flex-col overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgb(127,29,29,0.08)] hover:-translate-y-2 hover:bg-white/80 h-full">
       {/* Background Tint at top */}
       <div className={`absolute top-0 right-0 w-full h-32 lg:h-48 ${scheme.bgTint} rounded-b-[2rem] lg:rounded-b-[4rem] z-0 opacity-80 transition-all duration-500 group-hover:h-36 lg:group-hover:h-52`} />
-      
+
       {/* Background Hexagon Graphic */}
-      <svg 
-        viewBox="0 0 100 100" 
-        className={`absolute top-2 right-2 w-24 h-24 lg:w-32 lg:h-32 fill-transparent ${scheme.polygon} z-0 opacity-60 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`} 
-        strokeWidth="1.5" 
-        strokeLinecap="round" 
+      <svg
+        viewBox="0 0 100 100"
+        className={`absolute top-2 right-2 w-24 h-24 lg:w-32 lg:h-32 fill-transparent ${scheme.polygon} z-0 opacity-60 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}
+        strokeWidth="1.5"
+        strokeLinecap="round"
         strokeLinejoin="round"
       >
         <polygon points="50 3 93 25 93 75 50 97 7 75 7 25" />
@@ -82,7 +82,7 @@ export function CourseCard({
       <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
         {/* Compare Button */}
         {onToggleCompare && (
-          <button 
+          <button
             onClick={onToggleCompare}
             className={`p-2.5 rounded-full shadow-sm backdrop-blur-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-900/20 hover:scale-110 hover:-translate-y-1 cursor-pointer ${isCompared ? 'bg-red-900 text-white shadow-[0_0_15px_rgba(127,29,29,0.5)]' : 'bg-white/70 hover:bg-white text-slate-500 hover:text-slate-700'}`}
             aria-label={isCompared ? "Remove from comparison" : "Add to comparison"}
@@ -94,7 +94,7 @@ export function CourseCard({
 
         {/* Bookmark Button */}
         {onToggleBookmark && (
-          <button 
+          <button
             onClick={onToggleBookmark}
             className="p-2.5 rounded-full bg-white/70 hover:bg-white shadow-sm backdrop-blur-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-900/20 hover:scale-110 hover:-translate-y-1 cursor-pointer"
             aria-label={isBookmarked ? "Remove from bookmarks" : "Add to bookmarks"}
@@ -166,8 +166,8 @@ export function CourseCard({
 
       {/* Action Footer for Prospectus Download feature */}
       <div className="px-6 pb-6 pt-2 sm:px-5 sm:pb-5 lg:px-8 lg:pb-6 lg:pt-2 z-10 mt-1">
-        <a 
-          href={`/pdfs/${course.pdfFileName}`}
+        <a
+          href={`/${course.pdfFileName}`}
           download={course.pdfFileName}
           className={`w-full py-3 sm:py-2.5 lg:py-3 flex items-center justify-center gap-2 rounded-xl sm:rounded-lg lg:rounded-xl bg-white/50 backdrop-blur-sm text-slate-600 font-semibold text-sm transition-all duration-300 shadow-sm border border-white/60 
             hover:text-white hover:shadow-lg group-hover:border-transparent ${colorMap[course.colorScheme].badge.split(' ')[0].replace('bg-', 'hover:bg-')}

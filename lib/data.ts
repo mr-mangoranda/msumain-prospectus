@@ -449,7 +449,7 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Software Engineer",
     "colorScheme": "orange",
-    "pdfFileName": "msu-bscs-prospectus.pdf"
+    "pdfFileName": "CICS/msu-bscs-prospectus.pdf"
   },
   {
     "id": "c_38",
