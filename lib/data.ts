@@ -453,17 +453,28 @@ export const coursesData: Course[] = [
   },
   {
     "id": "c_38",
-    "code": "BSIT",
-    "name": "BS Information Technology",
-    "description": "Focuses on network administration, web development, and IT systems.",
+    "code": "BSIT-DB",
+    "name": "BS Information Technology Major in Database",
+    "description": "Focuses on database management, data systems, and backend technologies.",
     "college": "College of Information and Computing Sciences",
     "duration": "4 Years",
-    "careers": "IT Specialist",
+    "careers": "Database Administrator",
     "colorScheme": "purple",
-    "pdfFileName": "msu-bsit-prospectus.pdf"
+    "pdfFileName": "CICS/msu-bsit-database-prospectus.pdf"
   },
   {
     "id": "c_39",
+    "code": "BSIT-NET",
+    "name": "BS Information Technology Major in Networking",
+    "description": "Focuses on computer networks, cybersecurity, and network infrastructure.",
+    "college": "College of Information and Computing Sciences",
+    "duration": "4 Years",
+    "careers": "Network Administrator",
+    "colorScheme": "blue",
+    "pdfFileName": "CICS/msu-bsit-networking-prospectus.pdf"
+  },
+  {
+    "id": "c_40",
     "code": "BSIS",
     "name": "BS Information Systems",
     "description": "Integration of IT solutions with business processes.",
@@ -471,18 +482,7 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Systems Analyst",
     "colorScheme": "yellow",
-    "pdfFileName": "msu-bsis-prospectus.pdf"
-  },
-  {
-    "id": "c_40",
-    "code": "D-IT",
-    "name": "Diploma in Information Technology",
-    "description": "2-year practical IT skills program.",
-    "college": "College of Information and Computing Sciences",
-    "duration": "2 Years",
-    "careers": "IT Technician",
-    "colorScheme": "green",
-    "pdfFileName": "msu-d-it-prospectus.pdf"
+    "pdfFileName": "CICS/msu-bsis-prospectus.jpg"
   },
   {
     "id": "c_41",
