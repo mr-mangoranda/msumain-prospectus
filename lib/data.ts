@@ -88,17 +88,17 @@ export const coursesData: Course[] = [
     "colorScheme": "yellow",
     "pdfFileName": "msu-bs-abm-prospectus.pdf"
   },
-  {
-    "id": "c_5",
-    "code": "DAT",
-    "name": "Diploma in Agricultural Technology",
-    "description": "2-year program focusing on hands-on agricultural skills.",
-    "college": "College of Agriculture",
-    "duration": "2 Years",
-    "careers": "Agricultural Technician",
-    "colorScheme": "green",
-    "pdfFileName": "msu-dat-prospectus.pdf"
-  },
+  // {
+  //   "id": "c_5",
+  //   "code": "DAT",
+  //   "name": "Diploma in Agricultural Technology",
+  //   "description": "2-year program focusing on hands-on agricultural skills.",
+  //   "college": "College of Agriculture",
+  //   "duration": "2 Years",
+  //   "careers": "Agricultural Technician",
+  //   "colorScheme": "green",
+  //   "pdfFileName": "msu-dat-prospectus.pdf"
+  // },
   {
     "id": "c_6",
     "code": "MS-AGRI",
