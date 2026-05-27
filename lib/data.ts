@@ -55,28 +55,28 @@ export const coursesData: Course[] = [
     "colorScheme": "blue",
     "pdfFileName": "msu-bsa-as-prospectus.pdf"
   },
-  {
-    "id": "c_2",
-    "code": "BSA-ENTOM",
-    "name": "BS Agriculture Major in Entomology",
-    "description": "Study of insects and their relationship to humans, the environment, and other organisms.",
-    "college": "College of Agriculture",
-    "duration": "4 Years",
-    "careers": "Entomologist, Pest Control Specialist",
-    "colorScheme": "orange",
-    "pdfFileName": "msu-bsa-entom-prospectus.pdf"
-  },
-  {
-    "id": "c_3",
-    "code": "BSA-PP",
-    "name": "BS Agriculture Major in Plant Pathology",
-    "description": "Study of plant diseases and their management.",
-    "college": "College of Agriculture",
-    "duration": "4 Years",
-    "careers": "Plant Pathologist",
-    "colorScheme": "purple",
-    "pdfFileName": "msu-bsa-pp-prospectus.pdf"
-  },
+  // {
+  //   "id": "c_2",
+  //   "code": "BSA-ENTOM",
+  //   "name": "BS Agriculture Major in Entomology",
+  //   "description": "Study of insects and their relationship to humans, the environment, and other organisms.",
+  //   "college": "College of Agriculture",
+  //   "duration": "4 Years",
+  //   "careers": "Entomologist, Pest Control Specialist",
+  //   "colorScheme": "orange",
+  //   "pdfFileName": "msu-bsa-entom-prospectus.pdf"
+  // },
+  // {
+  //   "id": "c_3",
+  //   "code": "BSA-PP",
+  //   "name": "BS Agriculture Major in Plant Pathology",
+  //   "description": "Study of plant diseases and their management.",
+  //   "college": "College of Agriculture",
+  //   "duration": "4 Years",
+  //   "careers": "Plant Pathologist",
+  //   "colorScheme": "purple",
+  //   "pdfFileName": "msu-bsa-pp-prospectus.pdf"
+  // },
   {
     "id": "c_4",
     "code": "BS-ABM",
@@ -99,17 +99,17 @@ export const coursesData: Course[] = [
   //   "colorScheme": "green",
   //   "pdfFileName": "msu-dat-prospectus.pdf"
   // },
-  {
-    "id": "c_6",
-    "code": "MS-AGRI",
-    "name": "Master of Science in Agriculture",
-    "description": "Post-graduate research in agricultural sciences.",
-    "college": "College of Agriculture",
-    "duration": "2 Years",
-    "careers": "Researcher, Academe",
-    "colorScheme": "pink",
-    "pdfFileName": "msu-ms-agri-prospectus.pdf"
-  },
+  // {
+  //   "id": "c_6",
+  //   "code": "MS-AGRI",
+  //   "name": "Master of Science in Agriculture",
+  //   "description": "Post-graduate research in agricultural sciences.",
+  //   "college": "College of Agriculture",
+  //   "duration": "2 Years",
+  //   "careers": "Researcher, Academe",
+  //   "colorScheme": "pink",
+  //   "pdfFileName": "msu-ms-agri-prospectus.pdf"
+  // },
   {
     "id": "c_7",
     "code": "BSA",
