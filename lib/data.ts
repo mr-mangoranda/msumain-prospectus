@@ -262,7 +262,7 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Civil Engineer",
     "colorScheme": "pink",
-    "pdfFileName": "msu-bsce-prospectus.pdf"
+    "pdfFileName": "COE/msu-bsce-prospectus.pdf"
   },
   {
     "id": "c_21",
