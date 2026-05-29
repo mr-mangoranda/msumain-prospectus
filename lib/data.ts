@@ -86,7 +86,7 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Agribusiness Manager",
     "colorScheme": "yellow",
-    "pdfFileName": "msu-bs-abm-prospectus.pdf"
+    "pdfFileName": "COA/msu-bs-abm-prospectus.pdf"
   },
   // {
   //   "id": "c_5",
@@ -515,7 +515,7 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Biologist, Pre-Med",
     "colorScheme": "blue",
-    "pdfFileName": "msu-bs-bio-prospectus.pdf"
+    "pdfFileName": "CNSM/msu-bs-bio-prospectus.pdf"
   },
   {
     "id": "c_44",
@@ -581,7 +581,7 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Public Administrator",
     "colorScheme": "maroon",
-    "pdfFileName": "msu-bpa-prospectus.pdf"
+    "pdfFileName": "CPA/msu-bpa-prospectus.pdf"
   },
   {
     "id": "c_50",
@@ -625,7 +625,7 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Political Analyst, Pre-Law",
     "colorScheme": "yellow",
-    "pdfFileName": "msu-ba-polsci-prospectus.pdf"
+    "pdfFileName": "CSSH/msu-ba-polsci-prospectus.pdf"
   },
   {
     "id": "c_54",
@@ -672,6 +672,17 @@ export const coursesData: Course[] = [
     "pdfFileName": "msu-ba-comm-prospectus.pdf"
   },
   {
+    "id": "CSSH-1",
+    "code": "BA-PHILO",
+    "name": "BA Philosophy",
+    "description": "Study of fundamental questions about existence, knowledge, ethics, and reasoning.",
+    "college": "College of Social Sciences and Humanities",
+    "duration": "4 Years",
+    "careers": "Professor, Researcher, Pre-Law",
+    "colorScheme": "green",
+    "pdfFileName": "CSSH/msu-ba-philosophy-prospectus.pdf"
+  },
+  {
     "id": "c_58",
     "code": "BPED",
     "name": "Bachelor of Physical Education",
@@ -702,7 +713,7 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Islamic Scholar",
     "colorScheme": "yellow",
-    "pdfFileName": "msu-ba-is-prospectus.pdf"
+    "pdfFileName": "KFCIAAS/msu-ba-is-prospectus.pdf"
   },
   {
     "id": "c_61",
