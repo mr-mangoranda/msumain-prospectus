@@ -1,6 +1,9 @@
 import { X, Bookmark, Download } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { coursesData } from '@/lib/data';
+import coursesDataRaw from '@/data/courses.json';
+import { Course } from '@/lib/types';
+
+const coursesData = coursesDataRaw as Course[];
 
 interface BookmarksSidebarProps {
   isOpen: boolean;
@@ -35,7 +38,7 @@ export function BookmarksSidebar({ isOpen, onClose, bookmarkedIds, onToggleBookm
                 <Bookmark className="w-6 h-6 text-red-900" />
                 <h2 className="text-xl font-bold text-slate-900">Bookmarked Courses</h2>
               </div>
-              <button 
+              <button
                 onClick={onClose}
                 className="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors focus:outline-none"
               >
@@ -51,7 +54,7 @@ export function BookmarksSidebar({ isOpen, onClose, bookmarkedIds, onToggleBookm
               ) : (
                 coursesData.filter(c => bookmarkedIds.includes(c.id)).map(course => (
                   <div key={course.id} className="p-5 border border-white/60 rounded-2xl relative hover:border-red-900/30 transition-all duration-300 hover:shadow-md hover:-translate-y-1 shadow-sm bg-white/50 backdrop-blur-md group">
-                    <button 
+                    <button
                       onClick={() => onToggleBookmark(course.id)}
                       className="absolute top-4 right-4 text-slate-300 hover:text-red-900 transition-colors focus:outline-none"
                       aria-label="Remove bookmark"
@@ -62,8 +65,8 @@ export function BookmarksSidebar({ isOpen, onClose, bookmarkedIds, onToggleBookm
                       <span className="text-[10px] font-bold text-red-900 uppercase tracking-wider">{course.code}</span>
                       <h4 className="font-bold text-slate-800 text-sm leading-tight">{course.name}</h4>
                       <p className="text-xs text-slate-500 mt-1 font-medium">{course.college}</p>
-                      <a 
-                        href={`/pdfs/${course.pdfFileName}`} 
+                      <a
+                        href={`/pdfs/${course.pdfFileName}`}
                         download={course.pdfFileName}
                         className="mt-4 text-xs font-bold text-slate-500 hover:text-red-900 flex items-center gap-1 w-max transition-colors"
                       >

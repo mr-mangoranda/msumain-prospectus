@@ -1,6 +1,9 @@
 import { X, GitCompare, Download } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { coursesData } from '@/lib/data';
+import coursesDataRaw from '@/data/courses.json';
+import { Course } from '@/lib/types';
+
+const coursesData = coursesDataRaw as Course[];
 
 interface CompareModalProps {
   isOpen: boolean;

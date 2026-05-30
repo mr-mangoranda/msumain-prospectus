@@ -2,8 +2,12 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { Search, BookOpen, ArrowUp, Bookmark } from 'lucide-react';
-import { coursesData, colleges } from '@/lib/data';
+import { colleges } from '@/lib/constants';
+import { Course } from '@/lib/types';
+import coursesDataRaw from '@/data/courses.json';
 import { CourseCard } from '@/components/CourseCard';
+
+const coursesData = (coursesDataRaw as Course[]).filter(c => c.isActive);
 import { motion, AnimatePresence } from 'motion/react';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { toast } from 'sonner';

@@ -1,40 +1,6 @@
-export type ColorScheme = 'maroon' | 'blue' | 'orange' | 'purple' | 'yellow' | 'green' | 'pink';
-
-export type Course = {
-  id: string;
-  code: string;
-  name: string;
-  description: string;
-  college: string;
-  duration: string;
-  careers: string;
-  colorScheme: ColorScheme;
-  pdfFileName: string;
-};
-
-export const colleges = [
-  "All Colleges",
-  "College of Agriculture",
-  "College of Business Administration and Accountancy",
-  "College of Education",
-  "College of Engineering",
-  "College of Fisheries",
-  "College of Forestry and Environmental Studies",
-  "College of Health Sciences",
-  "College of Hospitality and Tourism Management",
-  "College of Information and Computing Sciences",
-  "College of Law",
-  "College of Medicine",
-  "College of Natural Sciences and Mathematics",
-  "College of Public Affairs",
-  "College of Social Sciences and Humanities",
-  "College of Sports, Physical Education and Recreation",
-  "King Faisal Center for Islamic, Arabic and Asian Studies"
-];
-
-export const coursesData: Course[] = [
+[
   {
-    "id": "c_0",
+    "id": "bsa-agro",
     "code": "BSA-AGRO",
     "name": "BS Agriculture Major in Agronomy",
     "description": "Focuses on crop production and soil management.",
@@ -42,10 +8,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Agronomist, Crop Scientist",
     "colorScheme": "maroon",
-    "pdfFileName": "msu-bsa-agro-prospectus.pdf"
+    "pdfFileName": "msu-bsa-agro-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_1",
+    "id": "bsa-as",
     "code": "BSA-AS",
     "name": "BS Agriculture Major in Animal Science",
     "description": "Focuses on livestock production and management.",
@@ -53,32 +20,35 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Animal Scientist, Farm Manager",
     "colorScheme": "blue",
-    "pdfFileName": "msu-bsa-as-prospectus.pdf"
+    "pdfFileName": "msu-bsa-as-prospectus.pdf",
+    "isActive": true
   },
-  // {
-  //   "id": "c_2",
-  //   "code": "BSA-ENTOM",
-  //   "name": "BS Agriculture Major in Entomology",
-  //   "description": "Study of insects and their relationship to humans, the environment, and other organisms.",
-  //   "college": "College of Agriculture",
-  //   "duration": "4 Years",
-  //   "careers": "Entomologist, Pest Control Specialist",
-  //   "colorScheme": "orange",
-  //   "pdfFileName": "msu-bsa-entom-prospectus.pdf"
-  // },
-  // {
-  //   "id": "c_3",
-  //   "code": "BSA-PP",
-  //   "name": "BS Agriculture Major in Plant Pathology",
-  //   "description": "Study of plant diseases and their management.",
-  //   "college": "College of Agriculture",
-  //   "duration": "4 Years",
-  //   "careers": "Plant Pathologist",
-  //   "colorScheme": "purple",
-  //   "pdfFileName": "msu-bsa-pp-prospectus.pdf"
-  // },
   {
-    "id": "c_4",
+    "id": "bsa-entom",
+    "code": "BSA-ENTOM",
+    "name": "BS Agriculture Major in Entomology",
+    "description": "Study of insects and their relationship to humans, the environment, and other organisms.",
+    "college": "College of Agriculture",
+    "duration": "4 Years",
+    "careers": "Entomologist, Pest Control Specialist",
+    "colorScheme": "orange",
+    "pdfFileName": "msu-bsa-entom-prospectus.pdf",
+    "isActive": false
+  },
+  {
+    "id": "bsa-pp",
+    "code": "BSA-PP",
+    "name": "BS Agriculture Major in Plant Pathology",
+    "description": "Study of plant diseases and their management.",
+    "college": "College of Agriculture",
+    "duration": "4 Years",
+    "careers": "Plant Pathologist",
+    "colorScheme": "purple",
+    "pdfFileName": "msu-bsa-pp-prospectus.pdf",
+    "isActive": false
+  },
+  {
+    "id": "bs-abm",
     "code": "BS-ABM",
     "name": "BS Agribusiness Management",
     "description": "Integration of business principles with agriculture.",
@@ -86,32 +56,35 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Agribusiness Manager",
     "colorScheme": "yellow",
-    "pdfFileName": "COA/msu-bs-abm-prospectus.pdf"
+    "pdfFileName": "COA/msu-bs-abm-prospectus.pdf",
+    "isActive": true
   },
-  // {
-  //   "id": "c_5",
-  //   "code": "DAT",
-  //   "name": "Diploma in Agricultural Technology",
-  //   "description": "2-year program focusing on hands-on agricultural skills.",
-  //   "college": "College of Agriculture",
-  //   "duration": "2 Years",
-  //   "careers": "Agricultural Technician",
-  //   "colorScheme": "green",
-  //   "pdfFileName": "msu-dat-prospectus.pdf"
-  // },
-  // {
-  //   "id": "c_6",
-  //   "code": "MS-AGRI",
-  //   "name": "Master of Science in Agriculture",
-  //   "description": "Post-graduate research in agricultural sciences.",
-  //   "college": "College of Agriculture",
-  //   "duration": "2 Years",
-  //   "careers": "Researcher, Academe",
-  //   "colorScheme": "pink",
-  //   "pdfFileName": "msu-ms-agri-prospectus.pdf"
-  // },
   {
-    "id": "c_7",
+    "id": "dat",
+    "code": "DAT",
+    "name": "Diploma in Agricultural Technology",
+    "description": "2-year program focusing on hands-on agricultural skills.",
+    "college": "College of Agriculture",
+    "duration": "2 Years",
+    "careers": "Agricultural Technician",
+    "colorScheme": "green",
+    "pdfFileName": "msu-dat-prospectus.pdf",
+    "isActive": false
+  },
+  {
+    "id": "ms-agri",
+    "code": "MS-AGRI",
+    "name": "Master of Science in Agriculture",
+    "description": "Post-graduate research in agricultural sciences.",
+    "college": "College of Agriculture",
+    "duration": "2 Years",
+    "careers": "Researcher, Academe",
+    "colorScheme": "pink",
+    "pdfFileName": "msu-ms-agri-prospectus.pdf",
+    "isActive": false
+  },
+  {
+    "id": "bsa",
     "code": "BSA",
     "name": "BS Accountancy",
     "description": "Prepares students for the CPA licensure exam and a career in accounting.",
@@ -119,10 +92,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "CPA, Auditor",
     "colorScheme": "maroon",
-    "pdfFileName": "msu-bsa-prospectus.pdf"
+    "pdfFileName": "msu-bsa-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_8",
+    "id": "bsba-mkt",
     "code": "BSBA-MKT",
     "name": "BSBA Major in Marketing Management",
     "description": "Focuses on market research, consumer behavior, and sales.",
@@ -130,10 +104,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Marketing Manager",
     "colorScheme": "blue",
-    "pdfFileName": "msu-bsba-mkt-prospectus.pdf"
+    "pdfFileName": "msu-bsba-mkt-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_9",
+    "id": "bsba-econ",
     "code": "BSBA-ECON",
     "name": "BSBA Major in Business Economics",
     "description": "Applies economic theories to business decision-making.",
@@ -141,10 +116,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Economic Analyst",
     "colorScheme": "orange",
-    "pdfFileName": "msu-bsba-econ-prospectus.pdf"
+    "pdfFileName": "msu-bsba-econ-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_10",
+    "id": "bsba-hr",
     "code": "BSBA-HR",
     "name": "BSBA Major in Human Resource Management",
     "description": "Focuses on talent acquisition and organizational behavior.",
@@ -152,10 +128,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "HR Manager",
     "colorScheme": "purple",
-    "pdfFileName": "msu-bsba-hr-prospectus.pdf"
+    "pdfFileName": "msu-bsba-hr-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_11",
+    "id": "mba",
     "code": "MBA",
     "name": "Master in Business Administration",
     "description": "Post-graduate program for business leaders.",
@@ -163,10 +140,11 @@ export const coursesData: Course[] = [
     "duration": "2 Years",
     "careers": "Executive, Entrepreneur",
     "colorScheme": "yellow",
-    "pdfFileName": "msu-mba-prospectus.pdf"
+    "pdfFileName": "msu-mba-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_12",
+    "id": "beed",
     "code": "BEED",
     "name": "Bachelor of Elementary Education",
     "description": "Prepares students to teach in elementary schools.",
@@ -174,10 +152,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Elementary Teacher",
     "colorScheme": "green",
-    "pdfFileName": "msu-beed-prospectus.pdf"
+    "pdfFileName": "msu-beed-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_13",
+    "id": "bsed-eng",
     "code": "BSED-ENG",
     "name": "BSEd Major in English",
     "description": "Prepares secondary education English teachers.",
@@ -185,10 +164,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "High School English Teacher",
     "colorScheme": "pink",
-    "pdfFileName": "msu-bsed-eng-prospectus.pdf"
+    "pdfFileName": "msu-bsed-eng-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_14",
+    "id": "bsed-math",
     "code": "BSED-MATH",
     "name": "BSEd Major in Mathematics",
     "description": "Prepares secondary education Mathematics teachers.",
@@ -196,10 +176,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Math Teacher",
     "colorScheme": "maroon",
-    "pdfFileName": "msu-bsed-math-prospectus.pdf"
+    "pdfFileName": "msu-bsed-math-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_15",
+    "id": "bsed-sci",
     "code": "BSED-SCI",
     "name": "BSEd Major in Science",
     "description": "Prepares secondary education Science teachers.",
@@ -207,10 +188,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Science Teacher",
     "colorScheme": "blue",
-    "pdfFileName": "msu-bsed-sci-prospectus.pdf"
+    "pdfFileName": "msu-bsed-sci-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_16",
+    "id": "bsed-fil",
     "code": "BSED-FIL",
     "name": "BSEd Major in Filipino",
     "description": "Prepares secondary education Filipino teachers.",
@@ -218,10 +200,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Filipino Teacher",
     "colorScheme": "orange",
-    "pdfFileName": "msu-bsed-fil-prospectus.pdf"
+    "pdfFileName": "msu-bsed-fil-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_17",
+    "id": "bsed-soc",
     "code": "BSED-SOC",
     "name": "BSEd Major in Social Studies",
     "description": "Prepares secondary education Social Studies teachers.",
@@ -229,10 +212,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Social Studies Teacher",
     "colorScheme": "purple",
-    "pdfFileName": "msu-bsed-soc-prospectus.pdf"
+    "pdfFileName": "msu-bsed-soc-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_18",
+    "id": "maed",
     "code": "MAED",
     "name": "Master of Arts in Education",
     "description": "Post-graduate program for educational leadership.",
@@ -240,10 +224,11 @@ export const coursesData: Course[] = [
     "duration": "2 Years",
     "careers": "School Administrator",
     "colorScheme": "yellow",
-    "pdfFileName": "msu-maed-prospectus.pdf"
+    "pdfFileName": "msu-maed-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_19",
+    "id": "phd-ed",
     "code": "PHD-ED",
     "name": "PhD in Educational Management",
     "description": "Doctoral program for high-level educational management.",
@@ -251,10 +236,11 @@ export const coursesData: Course[] = [
     "duration": "3-4 Years",
     "careers": "Superintendent, Professor",
     "colorScheme": "green",
-    "pdfFileName": "msu-phd-ed-prospectus.pdf"
+    "pdfFileName": "msu-phd-ed-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_20",
+    "id": "bsce",
     "code": "BSCE",
     "name": "BS Civil Engineering",
     "description": "Design and construction of infrastructure.",
@@ -262,10 +248,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Civil Engineer",
     "colorScheme": "pink",
-    "pdfFileName": "COE/msu-bsce-prospectus.pdf"
+    "pdfFileName": "COE/msu-bsce-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_21",
+    "id": "bsme",
     "code": "BSME",
     "name": "BS Mechanical Engineering",
     "description": "Design and manufacturing of mechanical systems.",
@@ -273,10 +260,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Mechanical Engineer",
     "colorScheme": "maroon",
-    "pdfFileName": "msu-bsme-prospectus.pdf"
+    "pdfFileName": "msu-bsme-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_22",
+    "id": "bsee",
     "code": "BSEE",
     "name": "BS Electrical Engineering",
     "description": "Study of electrical systems and power.",
@@ -284,10 +272,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Electrical Engineer",
     "colorScheme": "blue",
-    "pdfFileName": "msu-bsee-prospectus.pdf"
+    "pdfFileName": "msu-bsee-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_23",
+    "id": "bsece",
     "code": "BSECE",
     "name": "BS Electronics Engineering",
     "description": "Design of electronic circuits and communication systems.",
@@ -295,10 +284,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Electronics Engineer",
     "colorScheme": "orange",
-    "pdfFileName": "msu-bsece-prospectus.pdf"
+    "pdfFileName": "msu-bsece-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_24",
+    "id": "bsche",
     "code": "BSCHE",
     "name": "BS Chemical Engineering",
     "description": "Application of chemistry to industrial processes.",
@@ -306,10 +296,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Chemical Engineer",
     "colorScheme": "purple",
-    "pdfFileName": "msu-bsche-prospectus.pdf"
+    "pdfFileName": "msu-bsche-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_25",
+    "id": "bsae",
     "code": "BSAE",
     "name": "BS Agricultural and Biosystems Engineering",
     "description": "Engineering applied to agriculture and biology.",
@@ -317,10 +308,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Agricultural Engineer",
     "colorScheme": "yellow",
-    "pdfFileName": "msu-bsae-prospectus.pdf"
+    "pdfFileName": "msu-bsae-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_26",
+    "id": "dct",
     "code": "DCT",
     "name": "Diploma in Construction Technology",
     "description": "2-year program for construction skills.",
@@ -328,10 +320,11 @@ export const coursesData: Course[] = [
     "duration": "2 Years",
     "careers": "Construction Supervisor",
     "colorScheme": "green",
-    "pdfFileName": "msu-dct-prospectus.pdf"
+    "pdfFileName": "msu-dct-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_27",
+    "id": "det",
     "code": "DET",
     "name": "Diploma in Electrical Technology",
     "description": "2-year program for electrical installation.",
@@ -339,10 +332,11 @@ export const coursesData: Course[] = [
     "duration": "2 Years",
     "careers": "Electrician, Technician",
     "colorScheme": "pink",
-    "pdfFileName": "msu-det-prospectus.pdf"
+    "pdfFileName": "msu-det-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_28",
+    "id": "ms-eng",
     "code": "MS-ENG",
     "name": "Master of Science in Engineering",
     "description": "Post-graduate engineering research.",
@@ -350,10 +344,11 @@ export const coursesData: Course[] = [
     "duration": "2 Years",
     "careers": "Senior Engineer, Researcher",
     "colorScheme": "maroon",
-    "pdfFileName": "msu-ms-eng-prospectus.pdf"
+    "pdfFileName": "msu-ms-eng-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_29",
+    "id": "bsf",
     "code": "BSF",
     "name": "BS Fisheries",
     "description": "Study of aquaculture, capture fisheries, and aquatic resources.",
@@ -361,10 +356,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Fisheries Technologist",
     "colorScheme": "blue",
-    "pdfFileName": "msu-bsf-prospectus.pdf"
+    "pdfFileName": "msu-bsf-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_30",
+    "id": "d-aqua",
     "code": "D-AQUA",
     "name": "Diploma in Aquaculture",
     "description": "2-year program on breeding and rearing aquatic animals.",
@@ -372,10 +368,11 @@ export const coursesData: Course[] = [
     "duration": "2 Years",
     "careers": "Aquaculture Technician",
     "colorScheme": "orange",
-    "pdfFileName": "msu-d-aqua-prospectus.pdf"
+    "pdfFileName": "msu-d-aqua-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_31",
+    "id": "bs-for",
     "code": "BS-FOR",
     "name": "BS Forestry",
     "description": "Management and conservation of forest resources.",
@@ -383,10 +380,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Forester",
     "colorScheme": "purple",
-    "pdfFileName": "msu-bs-for-prospectus.pdf"
+    "pdfFileName": "msu-bs-for-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_32",
+    "id": "bs-es",
     "code": "BS-ES",
     "name": "BS Environmental Science",
     "description": "Study of environmental problems and solutions.",
@@ -394,10 +392,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Environmental Scientist",
     "colorScheme": "yellow",
-    "pdfFileName": "msu-bs-es-prospectus.pdf"
+    "pdfFileName": "msu-bs-es-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_33",
+    "id": "bsn",
     "code": "BSN",
     "name": "BS Nursing",
     "description": "Prepares students for nursing practice and healthcare.",
@@ -405,10 +404,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Registered Nurse",
     "colorScheme": "green",
-    "pdfFileName": "msu-bsn-prospectus.pdf"
+    "pdfFileName": "msu-bsn-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_34",
+    "id": "bshm",
     "code": "BSHM",
     "name": "BS Hospitality Management",
     "description": "Management of hotels, restaurants, and resorts.",
@@ -416,10 +416,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Hotel Manager",
     "colorScheme": "pink",
-    "pdfFileName": "msu-bshm-prospectus.pdf"
+    "pdfFileName": "msu-bshm-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_35",
+    "id": "bstm",
     "code": "BSTM",
     "name": "BS Tourism Management",
     "description": "Management of tourism operations and planning.",
@@ -427,10 +428,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Tourism Officer",
     "colorScheme": "maroon",
-    "pdfFileName": "msu-bstm-prospectus.pdf"
+    "pdfFileName": "msu-bstm-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_36",
+    "id": "d-cul",
     "code": "D-CUL",
     "name": "Diploma in Culinary Arts",
     "description": "2-year program in professional cooking.",
@@ -438,10 +440,11 @@ export const coursesData: Course[] = [
     "duration": "2 Years",
     "careers": "Chef",
     "colorScheme": "blue",
-    "pdfFileName": "msu-d-cul-prospectus.pdf"
+    "pdfFileName": "msu-d-cul-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_37",
+    "id": "bscs",
     "code": "BSCS",
     "name": "BS Computer Science",
     "description": "Study of algorithms, data structures, and software engineering.",
@@ -449,10 +452,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Software Engineer",
     "colorScheme": "orange",
-    "pdfFileName": "CICS/msu-bscs-prospectus.pdf"
+    "pdfFileName": "CICS/msu-bscs-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_38",
+    "id": "bsit-db",
     "code": "BSIT-DB",
     "name": "BS Information Technology Major in Database",
     "description": "Focuses on database management, data systems, and backend technologies.",
@@ -460,10 +464,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Database Administrator",
     "colorScheme": "purple",
-    "pdfFileName": "CICS/msu-bsit-database-prospectus.pdf"
+    "pdfFileName": "CICS/msu-bsit-database-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_39",
+    "id": "bsit-net",
     "code": "BSIT-NET",
     "name": "BS Information Technology Major in Networking",
     "description": "Focuses on computer networks, cybersecurity, and network infrastructure.",
@@ -471,10 +476,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Network Administrator",
     "colorScheme": "blue",
-    "pdfFileName": "CICS/msu-bsit-networking-prospectus.pdf"
+    "pdfFileName": "CICS/msu-bsit-networking-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_40",
+    "id": "bsis",
     "code": "BSIS",
     "name": "BS Information Systems",
     "description": "Integration of IT solutions with business processes.",
@@ -482,10 +488,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Systems Analyst",
     "colorScheme": "yellow",
-    "pdfFileName": "CICS/msu-bsis-prospectus.jpg"
+    "pdfFileName": "CICS/msu-bsis-prospectus.jpg",
+    "isActive": true
   },
   {
-    "id": "c_41",
+    "id": "jd",
     "code": "JD",
     "name": "Juris Doctor (Law)",
     "description": "Post-graduate professional degree in law.",
@@ -493,10 +500,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Lawyer, Judge",
     "colorScheme": "pink",
-    "pdfFileName": "msu-jd-prospectus.pdf"
+    "pdfFileName": "msu-jd-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_42",
+    "id": "md",
     "code": "MD",
     "name": "Doctor of Medicine",
     "description": "Post-graduate professional degree in medicine.",
@@ -504,21 +512,23 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Physician, Surgeon",
     "colorScheme": "maroon",
-    "pdfFileName": "msu-md-prospectus.pdf"
+    "pdfFileName": "msu-md-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_43",
+    "id": "bs-bio",
     "code": "BS-BIO",
-    "name": "BS Biology",
-    "description": "Study of living organisms and their vital processes.",
+    "name": "BS Biology Major in Animal Biology)",
+    "description": "Study of animals, their structure, physiology, behavior, ecology, evolution, and interactions with the environment.",
     "college": "College of Natural Sciences and Mathematics",
     "duration": "4 Years",
-    "careers": "Biologist, Pre-Med",
+    "careers": "Biologist, Zoologist, Wildlife Researcher, Animal Science Specialist, Pre-Med",
     "colorScheme": "blue",
-    "pdfFileName": "CNSM/msu-bs-bio-prospectus.pdf"
+    "pdfFileName": "CNSM/msu-bs-bio-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_44",
+    "id": "bs-chem",
     "code": "BS-CHEM",
     "name": "BS Chemistry",
     "description": "Study of matter, its properties, and reactions.",
@@ -526,10 +536,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Chemist",
     "colorScheme": "orange",
-    "pdfFileName": "msu-bs-chem-prospectus.pdf"
+    "pdfFileName": "msu-bs-chem-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_45",
+    "id": "bs-math",
     "code": "BS-MATH",
     "name": "BS Mathematics",
     "description": "Study of numbers, quantities, and shapes.",
@@ -537,10 +548,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Mathematician, Data Analyst",
     "colorScheme": "purple",
-    "pdfFileName": "msu-bs-math-prospectus.pdf"
+    "pdfFileName": "msu-bs-math-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_46",
+    "id": "bs-phys",
     "code": "BS-PHYS",
     "name": "BS Physics",
     "description": "Study of matter and energy.",
@@ -548,10 +560,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Physicist",
     "colorScheme": "yellow",
-    "pdfFileName": "msu-bs-phys-prospectus.pdf"
+    "pdfFileName": "msu-bs-phys-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_47",
+    "id": "ms-bio",
     "code": "MS-BIO",
     "name": "Master of Science in Biology",
     "description": "Post-graduate research in biological sciences.",
@@ -559,10 +572,11 @@ export const coursesData: Course[] = [
     "duration": "2 Years",
     "careers": "Researcher",
     "colorScheme": "green",
-    "pdfFileName": "msu-ms-bio-prospectus.pdf"
+    "pdfFileName": "msu-ms-bio-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_48",
+    "id": "bssw",
     "code": "BSSW",
     "name": "BS Social Work",
     "description": "Prepares students for professional social work practice.",
@@ -570,10 +584,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Social Worker",
     "colorScheme": "pink",
-    "pdfFileName": "msu-bssw-prospectus.pdf"
+    "pdfFileName": "msu-bssw-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_49",
+    "id": "bpa",
     "code": "BPA",
     "name": "Bachelor of Public Administration",
     "description": "Study of government and public policy.",
@@ -581,10 +596,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Public Administrator",
     "colorScheme": "maroon",
-    "pdfFileName": "CPA/msu-bpa-prospectus.pdf"
+    "pdfFileName": "CPA/msu-bpa-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_50",
+    "id": "mpa",
     "code": "MPA",
     "name": "Master of Public Administration",
     "description": "Post-graduate degree in public management.",
@@ -592,10 +608,11 @@ export const coursesData: Course[] = [
     "duration": "2 Years",
     "careers": "Government Official",
     "colorScheme": "blue",
-    "pdfFileName": "msu-mpa-prospectus.pdf"
+    "pdfFileName": "msu-mpa-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_51",
+    "id": "dpa",
     "code": "DPA",
     "name": "Doctor of Public Administration",
     "description": "Doctoral degree in public policy and governance.",
@@ -603,10 +620,11 @@ export const coursesData: Course[] = [
     "duration": "3-4 Years",
     "careers": "Policy Analyst, Academic",
     "colorScheme": "orange",
-    "pdfFileName": "msu-dpa-prospectus.pdf"
+    "pdfFileName": "msu-dpa-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_52",
+    "id": "ba-psych",
     "code": "BA-PSYCH",
     "name": "BA Psychology",
     "description": "Study of human behavior and mental processes.",
@@ -614,10 +632,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Psychometrician, HR",
     "colorScheme": "purple",
-    "pdfFileName": "msu-ba-psych-prospectus.pdf"
+    "pdfFileName": "msu-ba-psych-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_53",
+    "id": "ba-polsci",
     "code": "BA-POLSCI",
     "name": "BA Political Science",
     "description": "Study of political systems and behavior.",
@@ -625,10 +644,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Political Analyst, Pre-Law",
     "colorScheme": "yellow",
-    "pdfFileName": "CSSH/msu-ba-polsci-prospectus.pdf"
+    "pdfFileName": "CSSH/msu-ba-polsci-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_54",
+    "id": "ba-socio",
     "code": "BA-SOCIO",
     "name": "BA Sociology",
     "description": "Study of society and human social behavior.",
@@ -636,10 +656,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Sociologist",
     "colorScheme": "green",
-    "pdfFileName": "msu-ba-socio-prospectus.pdf"
+    "pdfFileName": "msu-ba-socio-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_55",
+    "id": "ba-hist",
     "code": "BA-HIST",
     "name": "BA History",
     "description": "Study of past events and their impacts.",
@@ -647,10 +668,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Historian, Researcher",
     "colorScheme": "pink",
-    "pdfFileName": "msu-ba-hist-prospectus.pdf"
+    "pdfFileName": "msu-ba-hist-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_56",
+    "id": "ba-els",
     "code": "BA-ELS",
     "name": "BA English Language Studies",
     "description": "Advanced study of the English language and linguistics.",
@@ -658,10 +680,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Linguist, Writer",
     "colorScheme": "maroon",
-    "pdfFileName": "msu-ba-els-prospectus.pdf"
+    "pdfFileName": "msu-ba-els-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_57",
+    "id": "ba-comm",
     "code": "BA-COMM",
     "name": "BA Communication",
     "description": "Study of media, broadcasting, and communication arts.",
@@ -669,10 +692,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Media Practitioner",
     "colorScheme": "blue",
-    "pdfFileName": "msu-ba-comm-prospectus.pdf"
+    "pdfFileName": "msu-ba-comm-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "CSSH-1",
+    "id": "ba-philo",
     "code": "BA-PHILO",
     "name": "BA Philosophy",
     "description": "Study of fundamental questions about existence, knowledge, ethics, and reasoning.",
@@ -680,10 +704,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Professor, Researcher, Pre-Law",
     "colorScheme": "green",
-    "pdfFileName": "CSSH/msu-ba-philosophy-prospectus.pdf"
+    "pdfFileName": "CSSH/msu-ba-philosophy-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_58",
+    "id": "bped",
     "code": "BPED",
     "name": "Bachelor of Physical Education",
     "description": "Prepares physical education teachers and sports leaders.",
@@ -691,10 +716,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "PE Teacher",
     "colorScheme": "orange",
-    "pdfFileName": "msu-bped-prospectus.pdf"
+    "pdfFileName": "msu-bped-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_59",
+    "id": "d-sc",
     "code": "D-SC",
     "name": "Diploma in Sports Coaching",
     "description": "2-year program for athletic coaching.",
@@ -702,10 +728,11 @@ export const coursesData: Course[] = [
     "duration": "2 Years",
     "careers": "Sports Coach",
     "colorScheme": "purple",
-    "pdfFileName": "msu-d-sc-prospectus.pdf"
+    "pdfFileName": "msu-d-sc-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_60",
+    "id": "ba-is",
     "code": "BA-IS",
     "name": "BA Islamic Studies",
     "description": "Study of Islamic history, theology, and law.",
@@ -713,10 +740,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Islamic Scholar",
     "colorScheme": "yellow",
-    "pdfFileName": "KFCIAAS/msu-ba-is-prospectus.pdf"
+    "pdfFileName": "KFCIAAS/msu-ba-is-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_61",
+    "id": "ba-arabic",
     "code": "BA-ARABIC",
     "name": "BA Arabic Language",
     "description": "Advanced study of the Arabic language.",
@@ -724,10 +752,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Translator, Educator",
     "colorScheme": "green",
-    "pdfFileName": "msu-ba-arabic-prospectus.pdf"
+    "pdfFileName": "msu-ba-arabic-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_62",
+    "id": "ba-ir",
     "code": "BA-IR",
     "name": "BA International Relations",
     "description": "Study of global politics and diplomacy.",
@@ -735,10 +764,11 @@ export const coursesData: Course[] = [
     "duration": "4 Years",
     "careers": "Diplomat, Analyst",
     "colorScheme": "pink",
-    "pdfFileName": "msu-ba-ir-prospectus.pdf"
+    "pdfFileName": "msu-ba-ir-prospectus.pdf",
+    "isActive": true
   },
   {
-    "id": "c_63",
+    "id": "ma-is",
     "code": "MA-IS",
     "name": "Master of Arts in Islamic Studies",
     "description": "Post-graduate degree in Islamic studies.",
@@ -746,6 +776,7 @@ export const coursesData: Course[] = [
     "duration": "2 Years",
     "careers": "Professor, Researcher",
     "colorScheme": "maroon",
-    "pdfFileName": "msu-ma-is-prospectus.pdf"
+    "pdfFileName": "msu-ma-is-prospectus.pdf",
+    "isActive": true
   }
-];
+]

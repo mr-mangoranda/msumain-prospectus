@@ -1,4 +1,4 @@
-import { Course } from "@/lib/data";
+import { Course } from "@/lib/types";
 import { Clock, Briefcase, GraduationCap, Download, Bookmark, BookmarkCheck, GitCompare } from "lucide-react";
 
 export function CourseCard({

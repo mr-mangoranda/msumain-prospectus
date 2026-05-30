@@ -1,6 +1,8 @@
 {
-  "name": "University Prospectus Portal",
+  "name": "MSU-Main Campus Prospectus Portal",
   "description": "Centralized digital prospectus portal for students to browse colleges and courses, and instantly download the PDF prospectus of their selected course.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
