@@ -48,6 +48,30 @@
     "isActive": false
   },
   {
+    "id": "bsa-aex",
+    "code": "BSA-AEX",
+    "name": "BS Agriculture Major in Agricultural Extension",
+    "description": "An intensive program designed to train professionals in agricultural education, community development, and rural leadership. It focuses on planning, implementing, and evaluating extension programs, tech-transfer methodologies, and peace-oriented community development across the MINSUPALA region.",
+    "college": "College of Agriculture",
+    "duration": "4 Years",
+    "careers": "Agricultural Extension Officer, Farm Consultant, Community Development Organizer, Rural Development Officer, Agricultural Journalist, Program Evaluator",
+    "colorScheme": "green",
+    "pdfFileName": "COA/msu-bsa-aex-prospectus.pdf",
+    "isActive": true
+  },
+  {
+    "id": "bsa-exd",
+    "code": "BSA-EXD",
+    "name": "BS Agriculture Major in Extension Education",
+    "description": "A curriculum focused on agricultural extension and communication, rural leadership, and community development. It trains students in extension teaching methods, adult education in agriculture, and extension program planning and evaluation to effectively support farming communities.",
+    "college": "College of Agriculture",
+    "duration": "4 Years",
+    "careers": "Agricultural Extension Officer, Rural Development Specialist, Community Organizer, Agricultural Educator, Agricultural Communication Consultant",
+    "colorScheme": "blue",
+    "pdfFileName": "COA/msu-bsa-exd-prospectus.pdf",
+    "isActive": true
+  },
+  {
     "id": "bs-abm",
     "code": "BS-ABM",
     "name": "BS Agribusiness Management",
@@ -404,7 +428,7 @@
     "duration": "4 Years",
     "careers": "Registered Nurse, Clinical Nurse Specialist, Public Health Nurse, Healthcare Administrator, Nurse Educator",
     "colorScheme": "green",
-    "pdfFileName": "msu-bsn-prospectus.pdf",
+    "pdfFileName": "CHS/msu-bsn-prospectus.pdf",
     "isActive": true
   },
   {
