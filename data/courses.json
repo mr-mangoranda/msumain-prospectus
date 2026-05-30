@@ -128,7 +128,7 @@
     "duration": "4 Years",
     "careers": "HR Manager",
     "colorScheme": "purple",
-    "pdfFileName": "msu-bsba-hr-prospectus.pdf",
+    "pdfFileName": "CBAA/msu-bsba-hr-prospectus.pdf",
     "isActive": true
   },
   {
@@ -684,6 +684,18 @@
     "isActive": true
   },
   {
+    "id": "ba-journ",
+    "code": "BA-JOURN",
+    "name": "BA Journalism",
+    "description": "Professional training in journalism, broadcasting, and digital media, focusing on media's role in social change, peacebuilding, and advocacy in the 21st-century global village.",
+    "college": "College of Social Sciences and Humanities",
+    "duration": "4 Years",
+    "careers": "Journalist, Broadcaster, Corporate Communication Officer, Media Practitioner, Public Service Professional",
+    "colorScheme": "maroon",
+    "pdfFileName": "CSSH/msu-ba-journalism-prospectus.pdf",
+    "isActive": true
+  },
+  {
     "id": "ba-comm",
     "code": "BA-COMM",
     "name": "BA Communication",
@@ -692,7 +704,19 @@
     "duration": "4 Years",
     "careers": "Media Practitioner",
     "colorScheme": "blue",
-    "pdfFileName": "msu-ba-comm-prospectus.pdf",
+    "pdfFileName": "CSSH/msu-ba-comm-prospectus.pdf",
+    "isActive": true
+  },
+  {
+    "id": "bs-devcom",
+    "code": "BS-DEVCOM",
+    "name": "BS Development Communication",
+    "description": "Studies the use of communication media and strategies to advance societal development, environmental sustainability, peace journalism, and community empowerment.",
+    "college": "College of Social Sciences and Humanities",
+    "duration": "4 Years",
+    "careers": "Development Communicator, Community Organizer, Public Information Officer, NGO Worker, Communication Researcher",
+    "colorScheme": "maroon",
+    "pdfFileName": "CSSH/msu-bs-devcom-prospectus.pdf",
     "isActive": true
   },
   {
